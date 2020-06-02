@@ -1,0 +1,25 @@
+  
+div.blank{
+    height:60px;
+    border:outline 5px;
+}
+
+div.blankSmall{
+    height:15px;
+    border:outline 5px;
+}
+
+body{
+
+    text-align:center;
+
+    font-size: 15px;
+}
+
+p1{
+    display: inline-block;
+}
+
+p2 {
+    display: inline-block;
+}
