@@ -43,7 +43,7 @@
     <p1>and plot solutions using:</p1>
     <p1>$$a)\: h=0.1 \: b)\: h=0.05\: c)\: h=0.025 \: d)\: h=0.01$$</p1>
 
-    <div class="blankSmall"></div>
+    <div class="blank"></div>
 
     </div>
 
@@ -117,7 +117,59 @@
     $$y(2)=2.66772787250012$$
     $$y\left(\frac{5}{2}\right)=2.70938800499274$$
 
+    <div class="blank"></div>
+
+    <h3>Part B) h=.05</h3>
+
+    <p7>This time we will see twice as many steps as there were in part a because the step size has been reduced by a half</p7>
+
+    <div class="blankSmall"></div>
+    <p8>When h=.05 and t=.05, we have</p8>
+    $$h=\frac{1}{20}, t_{0}=0, y_{0}=2, f(t, y)=5-3 \sqrt{y}$$
+    <p9>Now use Euler's method to approximate y(.5) after 10 steps</p9>
+
+    <div class="blankSmall"></div>
+    <h4>Answer</h4>
+    $$y\left(\frac{1}{2}\right)=2.30166603354356$$
+
+    <h4> Just like in Part A, we repeat this process for T=1,1.5,2.0,2.5</h4>
+    <h4>Answers</h4>
+    $$y(1)=2.48262624738228$$
+    $$y\left(\frac{3}{2}\right)=2.59351710664336$$
+    $$y(2)=2.6622699286492$$
+    $$y\left(\frac{5}{2}\right)=2.70518844985266$$
     <h4>Plot the approximations at h=.1</h4>
+  
+    <div class="blank"></div>
+
+    <h3>Part C) h=0.025</h3>
+  
+    <h4>Answers</h4>
+    $$y\left(\frac{1}{2}\right)=2.29863798427263$$
+    $$y(1)=2.47902957749642$$
+    $$y\left(\frac{3}{2}\right)=2.59023973355631$$
+    $$y(2)=2.65957929689476$$
+    $$y\left(\frac{5}{2}\right)=2.70310002326473$$
+
+    <div class="blank"></div>
+    <h3>Part D) h=0.01</h3>
+  
+    <h4>Answers</h4>
+    $$y\left(\frac{1}{2}\right)=2.29686258733234$$
+    $$y(1)=2.47690855658606$$
+    $$y\left(\frac{3}{2}\right)=2.58829723261312$$
+    $$y(2)=2.65797708416176$$
+    $$y\left(\frac{5}{2}\right)=2.70310002326473$$
+
+    <div class="blankSmall"></div>
+    <h2> Comments on the behavior</h2>
+    <div class="blankSmall"></div>
+    <p> When different values of h are used for the approximation,
+        it is clear that the approximations become more similar on each value of t,
+        implying that with smallervalues of h, that you are getting closer to a single solution </p>
+    <div class="blankSmall"></div>
+    <p> This effect can be seen when the values of the approxximation are plotted and compared at each level of h</p>
+   
 
     <!-- Load d3.js -->
     <script src="https://d3js.org/d3.v4.js"></script>
@@ -147,6 +199,7 @@
 <li>Darryl Nester's Slope Field Generator was used to calculate the slope field of the differntial equation in problem
     two.</li>
 <!-- https://homepages.bluffton.edu/~nesterd/apps/slopefields.html -->
+<li>Bootstrap was used for styling</li>
 <li>Lastly, Mathjax was used to render the LaTeX on this webpage.</li>
 
 
