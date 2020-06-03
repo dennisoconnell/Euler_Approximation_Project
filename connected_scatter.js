@@ -1,7 +1,7 @@
 // set the dimensions and margins of the graph
 var margin = {top: 10, right: 100, bottom: 30, left: 30},
-    width = 460 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
+    width = 2*600 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
 var svg = d3.select("#my_dataviz")
@@ -16,7 +16,7 @@ var svg = d3.select("#my_dataviz")
 d3.csv("data/data.csv", function(data) {
 
     // List of groups (here I have one group per column)
-    var allGroup = ["valueA", "valueB", "valueC"]
+    var allGroup = ["h1", "h2", "h3","h4"]
 
     // add the options to the button
     d3.select("#selectButton")
@@ -27,9 +27,9 @@ d3.csv("data/data.csv", function(data) {
       .text(function (d) { return d; }) // text showed in the menu
       .attr("value", function (d) { return d; }) // corresponding value returned by the button
 
-    // Add X axis --> it is a date format
+    // Add X axis
     var x = d3.scaleLinear()
-      .domain([0,10])
+      .domain([0,3])
       .range([ 0, width ]);
     svg.append("g")
       .attr("transform", "translate(0," + height + ")")
@@ -37,7 +37,7 @@ d3.csv("data/data.csv", function(data) {
 
     // Add Y axis
     var y = d3.scaleLinear()
-      .domain( [0,20])
+      .domain( [2.2,2.8])
       .range([ height, 0 ]);
     svg.append("g")
       .call(d3.axisLeft(y));
@@ -49,7 +49,7 @@ d3.csv("data/data.csv", function(data) {
         .datum(data)
         .attr("d", d3.line()
           .x(function(d) { return x(+d.time) })
-          .y(function(d) { return y(+d.valueA) })
+          .y(function(d) { return y(+d.h1) })
         )
         .attr("stroke", "black")
         .style("stroke-width", 4)
@@ -62,7 +62,7 @@ d3.csv("data/data.csv", function(data) {
       .enter()
       .append('circle')
         .attr("cx", function(d) { return x(+d.time) })
-        .attr("cy", function(d) { return y(+d.valueA) })
+        .attr("cy", function(d) { return y(+d.h1) })
         .attr("r", 7)
         .style("fill", "#69b3a2")
 
