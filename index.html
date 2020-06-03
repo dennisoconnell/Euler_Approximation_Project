@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Euler Approximation Project Dennis O'Connell</title>
-    
+
     <script type="text/javascript" id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-    </script>
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+        </script>
 
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/mycss.css" />
@@ -37,96 +38,100 @@
     The non-linear initial value problem in question is the following:
     $$y^{\prime}=5-3 \sqrt{y}, \quad y(0)=2$$
 
-    <p1>Our goal is to compute approximate values to the equation at the points</p1> <p1>$$t=0.5,1,1.5,2.0,2.5$$</p1>
+    <p1>Our goal is to compute approximate values to the equation at the points</p1>
+    <p1>$$t=0.5,1,1.5,2.0,2.5$$</p1>
     <p1>and plot solutions using:</p1>
-    <p1>$$a)\:  h=0.1 \: b)\:  h=0.05\:  c)\:  h=0.025 \: d)\:  h=0.01$$</p1>
+    <p1>$$a)\: h=0.1 \: b)\: h=0.05\: c)\: h=0.025 \: d)\: h=0.01$$</p1>
 
     <div class="blankSmall"></div>
 
     </div>
 
     <h3>Part A) h=.1</h3>
-    <p2>The Euler's method states that</p2> <p2>$$y_{n+1}=y_{n}+h \cdot f\left(t_{n}, y_{n}\right),$$</p2> 
+    <p2>The Euler's method states that</p2>
+    <p2>$$y_{n+1}=y_{n}+h \cdot f\left(t_{n}, y_{n}\right),$$</p2>
 
-    <p2>where</p2><p2>$$t_{n+1}=t_{n}+h$$</p2>
+    <p2>where</p2>
+    <p2>$$t_{n+1}=t_{n}+h$$</p2>
 
     <div class="blankSmall"></div>
 
 
-    <p3>When h=.1 and t=.5 we have that  $$h=\frac{1}{10}, t_{0}=0, y_{0}=2, f(t, y)=5-3 \sqrt{y}$$</p3>
+    <p3>When h=.1 and t=.5 we have that $$h=\frac{1}{10}, t_{0}=0, y_{0}=2, f(t, y)=5-3 \sqrt{y}$$</p3>
 
-    <p4>We have a step size of .1 and we are trying to approximate y(.5) so we will use this method to calculate one point at each of the five steps</p4>
-    
+    <p4>We have a step size of .1 and we are trying to approximate y(.5) so we will use this method to calculate one
+        point at each of the five steps</p4>
+
     <div class="blankSmall"> </div>
     <h4>Step 1</h4>
 
     $$\begin{array}{l}
-t_{1}=t_{0}+h=0+\frac{1}{10}=\frac{1}{10} \\
-y\left(t_{1}\right)=y\left(\frac{1}{10}\right)=y_{1}=y_{0}+h \cdot f\left(t_{0}, y_{0}\right)=2+h \cdot f(0,2)= \\
-=2+\frac{1}{10} \cdot(0.757359312880715)=2.07573593128807
-\end{array}$$
+    t_{1}=t_{0}+h=0+\frac{1}{10}=\frac{1}{10} \\
+    y\left(t_{1}\right)=y\left(\frac{1}{10}\right)=y_{1}=y_{0}+h \cdot f\left(t_{0}, y_{0}\right)=2+h \cdot f(0,2)= \\
+    =2+\frac{1}{10} \cdot(0.757359312880715)=2.07573593128807
+    \end{array}$$
 
     <h4>Step 2</h4>
 
     $$\begin{array}{l}
-t_{2}=t_{1}+h=\frac{1}{10}+\frac{1}{10}=\frac{1}{5} \\
-y\left(t_{2}\right)=y\left(\frac{1}{5}\right)=y_{2}=y_{1}+h \cdot f\left(t_{1}, y_{1}\right)=2.07573593128807+h \\
-\cdot f\left(\frac{1}{10}, 2.07573593128807\right)= \\
-=2.07573593128807+\frac{1}{10} \cdot(0.677775644232169)=2.14351349571129
-\end{array}$$
+    t_{2}=t_{1}+h=\frac{1}{10}+\frac{1}{10}=\frac{1}{5} \\
+    y\left(t_{2}\right)=y\left(\frac{1}{5}\right)=y_{2}=y_{1}+h \cdot f\left(t_{1}, y_{1}\right)=2.07573593128807+h \\
+    \cdot f\left(\frac{1}{10}, 2.07573593128807\right)= \\
+    =2.07573593128807+\frac{1}{10} \cdot(0.677775644232169)=2.14351349571129
+    \end{array}$$
 
-<h4>Step 3</h4>
-$$\begin{array}{l}
-t_{3}=t_{2}+h=\frac{1}{5}+\frac{1}{10}=\frac{3}{10} \\
-y\left(t_{3}\right)=y\left(\frac{3}{10}\right)=y_{3}=y_{2}+h \cdot f\left(t_{2}, y_{2}\right)=2.14351349571129+h \\
-\cdot f\left(\frac{1}{5}, 2.14351349571129\right)= \\
-=2.14351349571129+\frac{1}{10} \cdot(0.607777161686625)=2.20429121187995
-\end{array}$$
+    <h4>Step 3</h4>
+    $$\begin{array}{l}
+    t_{3}=t_{2}+h=\frac{1}{5}+\frac{1}{10}=\frac{3}{10} \\
+    y\left(t_{3}\right)=y\left(\frac{3}{10}\right)=y_{3}=y_{2}+h \cdot f\left(t_{2}, y_{2}\right)=2.14351349571129+h \\
+    \cdot f\left(\frac{1}{5}, 2.14351349571129\right)= \\
+    =2.14351349571129+\frac{1}{10} \cdot(0.607777161686625)=2.20429121187995
+    \end{array}$$
 
-<h4>Step 4</h4>
-$$\begin{array}{l}
-t_{4}=t_{3}+h=\frac{3}{10}+\frac{1}{10}=\frac{2}{5} \\
-y\left(t_{4}\right)=y\left(\frac{2}{5}\right)=y_{4}=y_{3}+h \cdot f\left(t_{3}, y_{3}\right)=2.20429121187995+h \\
-\cdot f\left(\frac{3}{10}, 2.20429121187995\right)= \\
-=2.20429121187995+\frac{1}{10} \cdot(0.545943320194549)=2.25888554389941
-\end{array}$$
-<h4>Step 5</h4>
-$$\begin{array}{l}
-t_{5}=t_{4}+h=\frac{2}{5}+\frac{1}{10}=\frac{1}{2} \\
-y\left(t_{5}\right)=y\left(\frac{1}{2}\right)=y_{5}=y_{4}+h \cdot f\left(t_{4}, y_{4}\right)=2.25888554389941+h \\
-\cdot f\left(\frac{2}{5}, 2.25888554389941\right)= \\
-=2.25888554389941+\frac{1}{10} \cdot(0.491123211364648)=2.30799786503587 \\
-\end{array}$$
+    <h4>Step 4</h4>
+    $$\begin{array}{l}
+    t_{4}=t_{3}+h=\frac{3}{10}+\frac{1}{10}=\frac{2}{5} \\
+    y\left(t_{4}\right)=y\left(\frac{2}{5}\right)=y_{4}=y_{3}+h \cdot f\left(t_{3}, y_{3}\right)=2.20429121187995+h \\
+    \cdot f\left(\frac{3}{10}, 2.20429121187995\right)= \\
+    =2.20429121187995+\frac{1}{10} \cdot(0.545943320194549)=2.25888554389941
+    \end{array}$$
+    <h4>Step 5</h4>
+    $$\begin{array}{l}
+    t_{5}=t_{4}+h=\frac{2}{5}+\frac{1}{10}=\frac{1}{2} \\
+    y\left(t_{5}\right)=y\left(\frac{1}{2}\right)=y_{5}=y_{4}+h \cdot f\left(t_{4}, y_{4}\right)=2.25888554389941+h \\
+    \cdot f\left(\frac{2}{5}, 2.25888554389941\right)= \\
+    =2.25888554389941+\frac{1}{10} \cdot(0.491123211364648)=2.30799786503587 \\
+    \end{array}$$
 
-<h4>Answer</h4>
-$$y\left(\frac{1}{2}\right)=2.30799786503587$$
+    <h4>Answer</h4>
+    $$y\left(\frac{1}{2}\right)=2.30799786503587$$
 
-<h4>Now repeat the process for t=1</h4>
-<p5>This time we have 10 steps since there are ten steps of length .1 in t=1.</p5>
+    <h4>Now repeat the process for t=1</h4>
+    <p5>This time we have 10 steps since there are ten steps of length .1 in t=1.</p5>
 
-<p6>After computations we get the approximation </p6>
-$$y(1)=2.49006201824323$$
+    <p6>After computations we get the approximation </p6>
+    $$y(1)=2.49006201824323$$
 
-<h4>Keep repeating the process for t=1.5,2.0,2.5</h4>
-$$y\left(\frac{3}{2}\right)=2.60022620250401$$
-$$y(2)=2.66772787250012$$
-$$y\left(\frac{5}{2}\right)=2.70938800499274$$
+    <h4>Keep repeating the process for t=1.5,2.0,2.5</h4>
+    $$y\left(\frac{3}{2}\right)=2.60022620250401$$
+    $$y(2)=2.66772787250012$$
+    $$y\left(\frac{5}{2}\right)=2.70938800499274$$
 
-<h4>Plot the approximations at h=.1</h4>
+    <h4>Plot the approximations at h=.1</h4>
 
-<!-- Load d3.js -->
-<script src="https://d3js.org/d3.v4.js"></script>
+    <!-- Load d3.js -->
+    <script src="https://d3js.org/d3.v4.js"></script>
 
-<!-- Create a div where the graph will take place -->
-<div id="my_dataviz"></div>
+    <!-- Create a div where the graph will take place -->
+    <div id="my_dataviz"></div>
 
-<!-- Color Scale -->
-<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <!-- Color Scale -->
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 
-<!-- Initialize a select button -->
-<select id="selectButton"></select>
+    <!-- Initialize a select button -->
+    <select id="selectButton"></select>
 
-<script src="connected_scatter.js"></script>
+    <script src="connected_scatter.js"></script>
 
 </body>
 
@@ -137,13 +142,17 @@ $$y\left(\frac{5}{2}\right)=2.70938800499274$$
 <h1> Technologies used for this project</h1>
 <li> Emathhelp.net was used for performing the computations of each Euler approximation </li>
 <!-- https://www.emathhelp.net/calculators/differential-equations/euler-method-calculator/?f=5-3+sqrt+y&type=h&h=0.1&x=0&y=2&e=2.5&steps=on -->
-<li>D3, a javascript datavisualization library, was used to plot the points created by each approximation. </li> 
+<li>D3, a javascript datavisualization library, was used to plot the points created by each approximation. </li>
 <!-- https://www.d3-graph-gallery.com/graph/connectedscatter_select.html -->
-<li>Darryl Nester's Slope Field Generator was used to calculate the slope field of the differntial equation in problem two.</li>
+<li>Darryl Nester's Slope Field Generator was used to calculate the slope field of the differntial equation in problem
+    two.</li>
 <!-- https://homepages.bluffton.edu/~nesterd/apps/slopefields.html -->
 <li>Lastly, Mathjax was used to render the LaTeX on this webpage.</li>
-</html>
+
+
 
 <div class="blank">
 
 </div>
+
+</html>
