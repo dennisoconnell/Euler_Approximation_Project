@@ -9,11 +9,23 @@ div.blankSmall{
     border:outline 5px;
 }
 
+div.lastParts{
+    display:inline-block;
+    margin: 40px;
+}
+
 body{
 
     text-align:center;
 
     font-size: 15px;
+}
+
+
+img{
+    width:540px; /* you can use % */
+    height: auto;
+    margin:20px;
 }
 
 p1{
@@ -23,3 +35,4 @@ p1{
 p2 {
     display: inline-block;
 }
+
