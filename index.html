@@ -168,7 +168,7 @@
     
     
    
-    <h2> Plot</h2>
+    <h2> Interactive Plot</h2>
     <!-- Load d3.js -->
     <script src="https://d3js.org/d3.v4.js"></script>
 
@@ -191,6 +191,7 @@
     <div class="blankSmall"></div>
 
     <h2> Comments on the behavior</h2>
+    <p> With smaller values of h, it seems that our answers are becoming more refined and closer to a single solution. Though it is difficult to see on the interactive graph, the approximations at h=.01 are closer to a single solution than they are at h=.1</p>
     <div class="blankSmall"></div>
 
     <div class="blankSmall"></div>
@@ -211,16 +212,32 @@
 
     <p> When we plug in different values for alpha between 1 and 4 we get lines of different behaviors</p>
     <img src="slope_field.png" alt="slope_field_with_lines">
-    <p>The red line represents alpha = 1</p>
-    <p>The green line represents alpha = 2</p>
-    <p>The blue line represents alpha = 3</p>
+    <li>The red line represents alpha = 1</li>
+    <li>The green line represents alpha = 2</li>
+    <li>The blue line represents alpha = 3</li>
+
+    <p>It is clear that between alpha = 2 and alpha = 3, there is a value for alpha that is a "tipping point" that leads to either divergence or convergence.</p>
     
     <h3>Part B</h3>
-    <p> It is clear that there is some value between 2 and 3 where</p>
+    <p id = "a"> In order to approximate the value of this tipping point, I plugged in values of alpha between 2 and 3 until they either drew a line that diverged or converged.</p>
 
     <img src="slope_field_approximation.png" alt="slope_field_approximation">
-    <p>Last black line is alpha = 2.3714</p>
+
+    <p></p>
+    <p>Last black line is alpha = 2.3714, it seems that the tipping point is about 2.73</p>
+
+    <p> Here, each time that I plugged in a value for alpha with a decimal place that was either slightly greater than 2.3 and if it stayed convergent then I would keep on increasing the value of the decimal place until it became divergent.</p>
     
+    <h3>Part C</h3>
+    <p>In order to approximate the tipping point, we can also use Euler's method</p>
+    <p>With h=.01, we get</p>
+    $$y\left(\frac{1}{2}\right)=3.01399704820084$$
+    $$y(1)=3.58697080063328$$
+    $$y\left(\frac{3}{2}\right)=3.96777080880568$$
+    $$y(2)=3.50207152939925$$
+
+
+
 </body>
 
 <div class="blank">
@@ -228,17 +245,20 @@
 </div>
 
 <h1> Technologies used for this project</h1>
-<li> Emathhelp.net was used for performing the computations of each Euler approximation </li>
-<!-- https://www.emathhelp.net/calculators/differential-equations/euler-method-calculator/?f=5-3+sqrt+y&type=h&h=0.1&x=0&y=2&e=2.5&steps=on -->
-<li>D3, a javascript datavisualization library, was used to plot the points created by each approximation. </li>
-<!-- https://www.d3-graph-gallery.com/graph/connectedscatter_select.html -->
+<li> Emathhelp.net was used for performing the computations of each Euler approximation. <a href="https://www.emathhelp.net/calculators/differential-equations/euler-method-calculator/?f=5-3+sqrt+y&type=h&h=0.1&x=0&y=2&e=2.5&steps=on" target="_blank">Link</a>.</li>
+
+<li>D3, a javascript datavisualization library, was used to plot the points created by each approximation in problem 1. <a href="https://www.d3-graph-gallery.com/graph/connectedscatter_select.html"target="_blank">Link</a>.</li>
+
 <li>Darryl Nester's Slope Field Generator was used to calculate the slope field of the differntial equation in problem
-    two.</li>
-<!-- https://homepages.bluffton.edu/~nesterd/apps/slopefields.html -->
-<li>Bootstrap was used for styling</li>
-<li>Lastly, Mathjax was used to render the LaTeX on this webpage.</li>
+    two. <a href="https://homepages.bluffton.edu/~nesterd/apps/slopefields.html"target="_blank">Link</a>.</li>
+
+<li>Mathjax was used to render the LaTeX on this webpage. <a href="https://www.mathjax.org/"target="_blank">Link</a>.</li>
+
+<li>Lastly, Bootstrap was used for styling.</li>
 
 
+<div class="blankSmall"></div>
+<p>Check out the Github Repo here: <a href="https://github.com/dennisoconnell/Euler_Approximation_Project_Spring_2020_Math_23"target="_blank">Link</a>.</p>
 
 <div class="blank">
 

@@ -15,15 +15,16 @@ div.lastParts{
 }
 
 body{
-
+    width: 50%;
+    margin:auto;
     text-align:center;
-
+    text-align:center;
     font-size: 15px;
 }
 
-
+}
 img{
-    width:540px; /* you can use % */
+    width:200px; /* you can use % */
     height: auto;
     margin:20px;
 }
