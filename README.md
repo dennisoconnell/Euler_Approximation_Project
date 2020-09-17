@@ -16,4 +16,4 @@ This was a project for the Series and Differential Equations class (Math 23) at 
 
 <li>Mathjax was used to render the LaTeX on this webpage. <a href="https://www.mathjax.org/"target="_blank">Link</a>.</li>
 
-<li>Lastly, Bootstrap was used for styling.</li>
+<li>Lastly, A Bootstrap theme from Bootswatch was used for styling.</li>
